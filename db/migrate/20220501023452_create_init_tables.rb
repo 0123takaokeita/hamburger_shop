@@ -3,7 +3,7 @@ class CreateInitTables < ActiveRecord::Migration[7.0]
     create_table :restaurants do |t|
       t.string  :name,           null: false
       t.string  :fee,            null: false, default: 0
-      t.integer :time_repuired,  null: false
+      t.integer :time_required,  null: false
       t.timestamps
     end
 
