@@ -1,9 +1,10 @@
 import React, { Fragment} from "react";
 
-export const Foods = () => {
-  return (
-    <Fragment>
-      フード一覧
-    </Fragment>
-  )
+export const Foods = ({ props }) => {
+    return (
+        <Fragment>
+            フード一覧
+            <p>restaurantsId: { props.params.restaurantsId } </p>
+        </Fragment>
+    )
 }

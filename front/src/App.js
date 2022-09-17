@@ -8,21 +8,21 @@ import { Foods } from "./containers/Foods.jsx";
 import { Orders } from "./containers/Orders.jsx";
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/restaurants">
-          <Restaurants />
-        </Route>
-        <Route exact path="/foods">
-          <Foods />
-        </Route>
-        <Route exact path="/orders">
-          <Orders />
-        </Route>
-      </Switch>
-    </Router>
-  )
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/restaurants">
+                    <Restaurants />
+                </Route>
+                <Route exact path="/restaurants/:restaurantsId/foods"
+                    render={({ match }) => <Foods props={ match } /> }
+                />
+                <Route exact path="/orders">
+                    <Orders />
+                </Route>
+            </Switch>
+        </Router>
+    )
 }
 
 export default App;
